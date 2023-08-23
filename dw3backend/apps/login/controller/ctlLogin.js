@@ -36,7 +36,7 @@ function AutenticaJWT(req, res, next) {
       return res
         .status(200)
         .json({ auth: false, message: "JWT inválido ou expirado" });
-
+        
     req.userId = decoded.id;
     next();
   });
